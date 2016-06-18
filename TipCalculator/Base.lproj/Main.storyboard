@@ -18,24 +18,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAy-GX-ebS">
-                                <rect key="frame" x="216" y="157" width="250" height="100"/>
+                                <rect key="frame" x="175" y="180" width="250" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="3L7-p5-vr0"/>
                                     <constraint firstAttribute="width" constant="250" id="aNy-ge-Ana"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="95"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="95"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userInput:" destination="EyE-9W-q8e" eventType="editingDidEnd" id="BuI-1K-BcW"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip (15%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-fh-sDm">
+                                <rect key="frame" x="208" y="315" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="totalLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49j-nH-O06">
+                                <rect key="frame" x="208" y="377" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tipSumLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vS-Su-BOV">
+                                <rect key="frame" x="362" y="311" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="totalSumLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDr-Xd-w3y">
+                                <rect key="frame" x="362" y="377" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oAy-GX-ebS" firstAttribute="top" secondItem="ymH-Wt-UhA" secondAttribute="bottom" constant="93" id="eO4-Op-La7"/>
-                            <constraint firstAttribute="trailing" secondItem="oAy-GX-ebS" secondAttribute="trailing" constant="134" id="fFU-sc-NjA"/>
+                            <constraint firstItem="oAy-GX-ebS" firstAttribute="centerY" secondItem="Mri-z8-hPM" secondAttribute="centerY" constant="-70" id="Ak2-dv-XSe"/>
+                            <constraint firstItem="oAy-GX-ebS" firstAttribute="centerX" secondItem="Mri-z8-hPM" secondAttribute="centerX" id="J6b-Nu-eYw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z6O-ib-aQr"/>
                     <connections>
                         <outlet property="textField" destination="oAy-GX-ebS" id="CWc-Cj-8Iv"/>
+                        <outlet property="tipLabel" destination="Z2b-fh-sDm" id="TUz-Rr-Duc"/>
+                        <outlet property="tipSumLabel" destination="9vS-Su-BOV" id="2tj-mi-WEP"/>
+                        <outlet property="totalLabel" destination="49j-nH-O06" id="IlW-p0-zc5"/>
+                        <outlet property="totalSumLabel" destination="PDr-Xd-w3y" id="40I-w4-0Iq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DS2-fo-Jmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
